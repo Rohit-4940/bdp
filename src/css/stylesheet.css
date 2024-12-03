@@ -1581,15 +1581,38 @@ body {
 
 
 
-.cake_class{
-	position: fixed;
-	left:45%;
-	top:60%;
-	opacity: 1.0;
-	z-index: 9999;
-	width: 12%;
-	height: 20%;
+.cake_class {
+    position: fixed;
+    left: 45%;
+    top: 60%;
+    opacity: 1.0;
+    z-index: 9999;
+    width: 12%;
+    height: 20%;
 }
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .cake_class {
+        left: 50%; /* Center horizontally */
+        top: 50%; /* Center vertically */
+        transform: translate(-50%, -50%); /* Adjust for centering */
+        width: 20%; /* Increase width for better visibility */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+/* Adjust for very small screens (e.g., mobile phones) */
+@media (max-width: 480px) {
+    .cake_class {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 30%;
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
 .control-panel {
 	position: fixed;
 	bottom: 0;

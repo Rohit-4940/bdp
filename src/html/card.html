@@ -8,7 +8,7 @@
 	<meta name="theme-color" content="#F26B38">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
-  <title>Happy Birthday card || Learningrobo</title>
+  <title>Happy Birthday Isha</title>
 </head>
 <style>
 * {
@@ -29,8 +29,9 @@ background: linear-gradient(to right, #45B649, #DCE35B);
 .card {
   background: #12192c;
   border-radius: 30px;
-  height: 85vh;
-  width: 80vw;
+  height: auto; /* Allow the card to adjust height to its content */
+  width: 90vw; /* Reduce width to fit better on small screens */
+  max-width: 1200px; /* Prevent the card from becoming too large on large screens */
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   text-align: center;
   display: flex;
@@ -39,8 +40,51 @@ background: linear-gradient(to right, #45B649, #DCE35B);
   align-items: center;
   padding: 1em;
   overflow: hidden;
-  color:#DCE35B;
+  color: #DCE35B;
 }
+
+.text {
+  padding: 1em; /* Reduce padding */
+  max-width: 100%; /* Ensure the text stays within the container */
+  word-wrap: break-word; /* Handle long words */
+  overflow-wrap: break-word;
+  text-align: justify; /* Adjust text alignment for better readability */
+}
+
+.text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+img.birthday {
+  max-width: 100%;
+  height: auto; /* Ensure the image scales proportionally */
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-bottom: 1em; /* Add space below the image */
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    flex-direction: column; /* Ensure stacking for smaller screens */
+  }
+
+  .text {
+    padding: 0.5em;
+  }
+
+  .text p {
+    font-size: 0.9rem; /* Slightly smaller font for better fit */
+  }
+
+  img.birthday {
+    width: 80%;
+    max-width: 300px; /* Ensure the image does not dominate small screens */
+  }
+}
+
 
 @media only screen and (min-width: 1000px) {
   .card {
@@ -66,7 +110,7 @@ background: linear-gradient(to right, #45B649, #DCE35B);
 }
 
 img.birthday {
-  max-height: 40vh;
+  max-height: 60vh;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
@@ -90,16 +134,41 @@ img.birthday {
     margin-top: 10px;
     text-align: center;
 }
+.text {
+  padding: 2em;
+  max-width: 90%; /* Ensures text does not exceed the card's width */
+}
+
+.text h1 {
+  font-family: cursive;
+  font-size: 2rem; /* Use responsive units */
+}
+
+.text p {
+  font-size: 1rem; /* Responsive font size */
+  line-height: 1.6; /* Improves readability */
+  word-wrap: break-word; /* Ensures long words break */
+  overflow-wrap: break-word; /* Ensures proper wrapping */
+  margin: 0; /* Prevent additional margin issues */
+}
+
+@media only screen and (max-width: 600px) {
+  .text h1 {
+    font-size: 1.5rem; /* Smaller font size for small screens */
+  }
+
+  .text p {
+    font-size: 0.9rem; /* Smaller font size for small screens */
+  }
+}
 
 </style>
 <body>
   <div class="card">
     <img src="https://cdn.pixabay.com/photo/2020/10/06/21/54/cake-5633461__480.png" alt="birthday" class="birthday">
     <div class="text">
-      <h1>Happy Birthday!</h1>
-      <p>Have a great future..!</p>
-      <p>- LearningRobo</p>
-      <div class="credit">Made with <span style="color:tomato">❤</span> by <a  href="https://www.learningrobo.com/">Learning Robo</a></div>
+      <h1>Happy Birthday! <a target="_self" rel="noopener noreferrer" href="../../index.html"> Isha</a></h1>
+      <p>On your birthday, I pray that God blesses you abundantly with all the good things in life―health, wealth, happiness, and success. May your dreams come true, and may you achieve everything you aspire to with grace and determination. As you prepare to step into the noble journey of becoming a doctor, may you be guided by wisdom and compassion to heal and make a difference in the lives of others. Here's to a bright future filled with endless possibilities and joy. Happy Birthday! 🌟Isha </p>
     </div>
     <div class="space"></div>
   </div>
